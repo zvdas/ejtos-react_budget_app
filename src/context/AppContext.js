@@ -114,7 +114,8 @@ export const AppProvider = (props) => {
 				remaining: remaining,
 				totalExpenses: state.expenses.reduce((total, item) => {return (total = total + item.cost)},0),
 				dispatch,
-				currency: state.currency
+				currency: state.currency.split(' ')[0],
+				currencyText: state.currency.split(' ')[1]
 			}}
 		>
 			{props.children}

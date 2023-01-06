@@ -112,6 +112,7 @@ export const AppProvider = (props) => {
 				expenses: state.expenses,
 				budget: state.budget,
 				remaining: remaining,
+				totalExpenses: state.expenses.reduce((total, item) => {return (total = total + item.cost)},0),
 				dispatch,
 				currency: state.currency
 			}}
